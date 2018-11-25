@@ -1,0 +1,17 @@
+<html>
+
+
+<body>
+<h1> Are you sure you want to delete {{founder.name}}? </h1>
+
+<form action="{{ url_for('deleteFounder', founder_id = founder.id ,startup_id = startup.id)}}" method = 'post'>
+
+<input type='submit', value = 'Delete'>
+
+</form>
+
+<a href = '{{url_for('startupDetails', startup_id = startup.id, )}}'> Cancel </a>
+
+</body>
+
+</html>

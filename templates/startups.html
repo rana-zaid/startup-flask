@@ -1,0 +1,31 @@
+<html>
+
+
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+
+<body>
+<div class = 'pane'>
+<h1 style="color:#212F3C;">&ensp;Startups</h1></br>
+<ul>
+{% for i in startups %}
+ <div class="panel panel-default">
+<div class="panel-body">
+<a href = "{{url_for('startupDetails', startup_id = i.id)}}"> <p>{{i.name}}</p></a>
+<a href='{{url_for('editStartup', startup_id = i.id)}}' >Edit</a>
+<a href='{{url_for('deleteStartup', startup_id = i.id)}}' >Delete</a>
+</div></div>
+
+{% endfor %}
+</ul>
+</div>
+</body>
+
+</html>

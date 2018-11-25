@@ -1,0 +1,24 @@
+<html>
+
+<body>
+
+<h1> Edit Founder </h1>
+
+
+<form action="{{ url_for('editFounder', founder_id = founder.id, startup_id = startup.id)}}" method = 'post'>
+
+	<p>Name:</p>
+		<input type ='text' size='30' name='name' placeholder = '{{founder.name }}'>
+	<p>Bio:</p>
+		<input type ='text' size='30' name='bio' placeholder = '{{founder.Bio }}'>
+</br></br>
+
+<input type='submit' value='Edit'>
+
+
+<a href = '{{url_for('startupDetails',startup_id = startup.id)}}'> Cancel </a>
+
+</form>
+</body>
+
+</html>
