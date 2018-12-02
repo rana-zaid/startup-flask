@@ -1,0 +1,22 @@
+<html>
+
+<body>
+
+<h1>Startup Name: {{startup.name}} </h1>
+
+
+<h1> Founders List: </h1>
+
+
+<form action="{{ url_for('startupDetails',startup_id = startup.id)}}" method = 'post'>
+<ul>
+	{% for i in founders %}
+	<li> <p><b>Name:</b> {{i.name}}</p>
+	<p><b>Bio:</b> {{i.bio}}</p>
+</br>
+	{% endfor %}
+</ul>
+</form>
+</body>
+
+</html>
