@@ -210,7 +210,6 @@ def gconnect():
 
 # User Helper Functions
 
-
 def createUser(login_session):
     newUser = User(name=login_session['username'], email=login_session[
                    'email'], picture=login_session['picture'])

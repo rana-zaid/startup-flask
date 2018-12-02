@@ -58,8 +58,6 @@ session.add(founder1_2)
 session.commit()
 
 
-
-
 startup3 = Startup(user_id=1, name="Hush")
 
 session.add(startup3)
