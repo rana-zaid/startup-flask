@@ -21,8 +21,6 @@
  <div class="panel panel-default">
 <div class="panel-body">
 <a href = "{{url_for('startupDetails', startup_id = i.id)}}"> <p>{{i.name}}</p></a>
-<a href='{{url_for('editStartup', startup_id = i.id)}}' >Edit</a>
-<a href='{{url_for('deleteStartup', startup_id = i.id)}}' >Delete</a>
 </div></div>
 
 {% endfor %}
