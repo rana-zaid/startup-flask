@@ -7,6 +7,7 @@ from sqlalchemy import create_engine
 
 Base = declarative_base()
 
+<<<<<<< HEAD
 class User(Base):
   __tablename__ = 'user'
 
@@ -25,6 +26,26 @@ class User(Base):
         'email'        : self.email,
         'picture'      : self.picture,
        }
+||||||| merged common ancestors
+=======
+class User(Base):
+  __tablename__ = 'user'
+
+  id = Column(Integer, primary_key=True)
+  name = Column(String(250), nullable=False)
+  email = Column(String(250), nullable=False)
+  picture = Column(String(250))
+
+  @property
+  def serialize(self):
+    """Return object data in easily serializeable format"""
+    return {
+        'name'         : self.name,
+        'id'           : self.id,
+        'email'        : self.email,
+        'picture'      : self.picture,
+       }
+>>>>>>> 3dee2caffc8673b4f3f8faa696308eb91b257a7c
 
 class Startup(Base):
     __tablename__ = 'startup'

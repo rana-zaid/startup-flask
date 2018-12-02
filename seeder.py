@@ -58,7 +58,17 @@ session.add(founder1_2)
 session.commit()
 
 
+<<<<<<< HEAD
 startup3 = Startup(user_id=1, name="Hush")
+||||||| merged common ancestors
+
+
+startup3 = Startup(name="Hush")
+=======
+
+
+startup3 = Startup(user_id=1, name="Hush")
+>>>>>>> 3dee2caffc8673b4f3f8faa696308eb91b257a7c
 
 session.add(startup3)
 session.commit()
